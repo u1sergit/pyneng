@@ -44,3 +44,13 @@ london_co = {
         'routing': True
     }
 }
+
+s1 = input("enter r1 or r2 or sw1:\n")
+if (s1 == 'r1'):
+    print(london_co['r1'])
+elif (s1 == 'r2'):
+    print(london_co['r2'])
+elif (s1 == 'sw1'):
+    print(london_co['sw1'])
+else:
+    print(' There is not a valid choise')
