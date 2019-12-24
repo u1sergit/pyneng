@@ -45,3 +45,19 @@ london_co = {
         'routing': True
     }
 }
+s1 = input("enter r1 or r2 or sw1:\n")
+if (s1 == 'r1'):
+    keys = ', '.join(london_co['r1'].keys())
+    choise = input('Введите имя параметра ({}):'.format(keys))
+    print(london_co['r1'][choise])
+
+elif (s1 == 'r2'):
+    keys = ', '.join(london_co['r2'].keys())
+    choise = input('Введите имя параметра ({}):'.format(keys))
+    print(london_co['r2'][choise])
+elif (s1 == 'sw1'):
+    keys = ', '.join(london_co['sw1'].keys())
+    choise = input('Введите имя параметра ({}):'.format(keys))
+    print(london_co['sw1'][choise])
+else:
+    print(' There is not a valid choise')

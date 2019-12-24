@@ -32,9 +32,6 @@ mask = int(ip[1])
 
 print('/' + str(mask))
 
-#print(int(mask / 8))
-#print(mask % 8)
-
 if ((mask - 8) > 0):
     oct1 = '1'*8
     mask = mask - 8
