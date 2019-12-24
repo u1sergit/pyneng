@@ -42,7 +42,8 @@ print('{:08b}  {:08b}  {:08b}  {:08b}'.format(
 try:
     mask = int(ip[1])
 except IndexError:
-    if (len(ip) == 1 ): print('Вы не указали маску')
+    if (len(ip) == 1 ): print('Вы не указали маску. Она будет вычислена из ip адреса')
+    mask = 
 
 
 if ((mask - 8) > 0):
