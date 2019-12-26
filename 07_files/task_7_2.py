@@ -12,3 +12,15 @@
 
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 '''
+
+import sys
+
+try:
+    with open(sys.argv[1]) as file:
+        for line in file:
+            if not line.startswith('!'):
+                print(line.rstrip())
+except FileNotFoundError:
+    print('File ' + sys.argv[1] + ' does not exist')
+except IndexError:
+    print("You didn't enter file name")
