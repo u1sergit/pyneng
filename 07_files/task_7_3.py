@@ -17,3 +17,15 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 '''
+with open("CAM_table.txt") as file:
+    for line in file:
+        if line.count('.') == 2:
+            lines = []
+            for l in line.strip().split(' '):
+                if l:
+                    lines.append(l)
+            print("{:8}{:18}{}".format(lines[0], lines[1], lines[-1]))
+                        
+
+
+

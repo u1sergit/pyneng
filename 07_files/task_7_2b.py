@@ -13,4 +13,25 @@
 
 '''
 
-ignore = ['duplex', 'alias', 'Current configuration']
+
+ignore = ['duplex', 'alias', 'Current configuration', '!', 'switchport']
+import sys
+
+try:
+    with open(sys.argv[1]) as file:
+        with open('config_sw1_cleared.txt', 'w') as f:
+            for line in file:'config_sw1_cleared.txt'
+                is_ignored = False
+
+
+                for ignor in ignore:
+                    if line.find(ignor) != -1:
+                        is_ignored = True
+                    
+                if not is_ignored:
+                    f.write(line)
+                       
+except FileNotFoundError:
+    print('File ' + sys.argv[1] + ' does not exist')
+except IndexError:
+    print("You didn't enter file name")
